@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Montserrat+Alternates:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;700&display=swap');
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 400px;
+    height: 600px;
+    gap: 64px 48px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .card{
+      width: 320px;
+      height: auto;
+      display: inline-block;
+      border-radius: 15px;
+      padding-top: 100px;
+      background-color: #04D361;
+      padding: 15px 10px 40px ;
+    }
+  
+  .loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .linkHome{
+      font-size: 20px;
+      font-family: 'Irish Grover', cursive;
+      color: blanchedalmond;
+  }
+
+  
