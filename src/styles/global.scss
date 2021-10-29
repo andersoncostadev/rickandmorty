@@ -12,12 +12,21 @@ body{
   background-color: #6F48C9;
 }
 
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+.loading {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 h1{
-  background-color: #04D361;
   color: black;
-  padding: 20px;
-  margin-bottom: 25px;
   font-family: 'Irish Grover', cursive;
   font-size: 50px;
   text-align: center;
@@ -30,40 +39,27 @@ p {
  text-align: center;
 }
 
-a {
-  text-decoration: none;
-  font-family: 'Source Code Pro', monospace;
-  font-weight:500px;
-  font-size: 15px;
-  color: black;
-  text-align: center;
-  padding-left: 50px;
-}
-
 
 button {
   height: 50px;
-  width: 300px;
+  width: 200px;
   margin-left: 250px;
-  position: relative;
-  top: -100%;
-  left: 40%;
-  text-align: center;
   font-family: 'Irish Grover', cursive;
   border: none;
   border-radius: 5px;
-  font-size: 25px;
-  font-weight: bolder;
-  background-color: orange;
-  color: blue;
- cursor: pointer;
-}
-
-button:hover{
+  font-size: 20px;
   background-color: #04D361;
   color: black;
-  transition: all 0.10s ease-in;
+  cursor: pointer;
+
+  &:hover{
+    background-color: black;
+    color: #04D361;
+    transition: all 0.6s ease-in;
+  }
+  
 }
+
 
 
 

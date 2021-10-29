@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
-import {Link} from 'react-router-dom';
+import Lottie from "lottie-react";
+import AnimationMorty from '../../assets/animation/morty-dance-loader.json';
 import api from '../../service/api';
+
 
 import './style.scss';
 
@@ -45,25 +47,21 @@ useEffect(() => {
 
 if(isLoad) {
     return (
-        <div className="loading">
-           <img src="https://tenor.com/view/load-loading-waiting-gif-5662595"/>
+        <div className="container loader">
+          <Lottie
+            animationData={AnimationMorty}
+            style={{ width: '600px', height: '600px'}}
+          />
         </div>
     )
 }
 
     return (
-        <div> 
+        <div className="container"> 
             <h1>
                 Rick And Morty
-            </h1>
-                <Link
-                 to='/'
-                 className='linkHome'
-                 >
-                     Voltar para Home
-                </Link>
-           
-          <div className="container">
+            </h1>    
+          <div className="content">
             {data.map(item => (
                 <div key={item.id} className="card">
                     <img src={item.image} alt={item.name}/>
@@ -71,6 +69,8 @@ if(isLoad) {
                     <a href={item.url}>Clique aqui para ver mais</a>
                 </div>
             ))}
+            </div>
+            <div className= "btn">
                 <button
                     onClick={()=> setPages(page - 1)}
                     disabled={ page <= 1}
